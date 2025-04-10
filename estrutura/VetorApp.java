@@ -1,3 +1,5 @@
+package Estruturas;
+
 import java.util.Arrays;
 
 public class VetorApp {
@@ -10,12 +12,12 @@ public class VetorApp {
         int indice = buscaBinaria(vetor, valorBusca);
         System.out.println("Índice do valor " + valorBusca + ": " + indice);
 
-        
+
         int valorInserir = 5; 
         vetor = inserirNoInicio(vetor, valorInserir);
         System.out.println("Vetor após inserção no início: " + Arrays.toString(vetor));
 
-        
+
         ListaDuplamenteEncadeada lista = new ListaDuplamenteEncadeada();
         for (int valor : vetor) {
             lista.inserirNoFinal(valor);
@@ -24,14 +26,14 @@ public class VetorApp {
         System.out.print("Lista original: ");
         lista.exibirLista();
 
-        
+
         lista.inserirAposValor(16, 99);
         System.out.print("Lista após inserir 99 após 16: ");
         lista.exibirLista();
 
         System.out.println("Número de nós na lista: " + lista.getNumeroDeNos());
 
-        
+
         Iterador iterador = new Iterador(lista);
         iterador.inserirAposAtual(100);
         System.out.print("Lista após inserir 100 após o atual: ");
@@ -50,7 +52,7 @@ public class VetorApp {
         lista.exibirLista();
     }
 
-    
+
     public static int buscaBinaria(int[] vetor, int valor) {
         int inicio = 0;
         int fim = vetor.length - 1;
@@ -70,7 +72,7 @@ public class VetorApp {
         return -1; 
     }
 
-    
+
     public static int[] inserirNoInicio(int[] vetor, int valor) {
         int[] novoVetor = new int[vetor.length + 1];
         novoVetor[0] = valor;
