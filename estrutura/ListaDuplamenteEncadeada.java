@@ -1,3 +1,5 @@
+package Estruturas;
+
 class No {
     int valor;
     No anterior;
@@ -21,7 +23,6 @@ class ListaDuplamenteEncadeada {
         this.tamanho = 0;
     }
 
-    
     public void inserirNoFinal(int valor) {
         No novoNo = new No(valor);
         if (inicio == null) {
@@ -34,12 +35,10 @@ class ListaDuplamenteEncadeada {
         tamanho++;
     }
 
-   
     public int getNumeroDeNos() {
         return tamanho;
     }
 
-    
     public boolean inserirAposValor(int valorReferencia, int novoValor) {
         No atual = inicio;
         while (atual != null) {
@@ -51,7 +50,7 @@ class ListaDuplamenteEncadeada {
                 if (atual.proximo != null) {
                     atual.proximo.anterior = novoNo;
                 } else {
-                    fim = novoNo; 
+                    fim = novoNo;
                 }
 
                 atual.proximo = novoNo;
@@ -63,7 +62,6 @@ class ListaDuplamenteEncadeada {
         return false;
     }
 
-
     public void exibirLista() {
         No atual = inicio;
         while (atual != null) {
@@ -72,7 +70,6 @@ class ListaDuplamenteEncadeada {
         }
         System.out.println();
     }
-
 
     public No getInicio() {
         return inicio;
