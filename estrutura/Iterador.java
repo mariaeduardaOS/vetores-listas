@@ -1,3 +1,5 @@
+package Estruturas;
+
 class Iterador {
     private No atual;
 
@@ -5,7 +7,7 @@ class Iterador {
         this.atual = lista.getInicio();
     }
 
-    
+
     public void inserirAposAtual(int valor) {
         if (atual == null) return;
 
@@ -19,7 +21,7 @@ class Iterador {
         atual.proximo = novoNo;
     }
 
-    
+
     public void removerAposAtual() {
         if (atual == null || atual.proximo == null) return;
 
@@ -31,7 +33,7 @@ class Iterador {
         }
     }
 
-    
+
     public void inserirAntesAtual(int valor) {
         if (atual == null) return;
 
@@ -45,7 +47,7 @@ class Iterador {
         atual.anterior = novoNo;
     }
 
-    
+
     public void removerAntesAtual() {
         if (atual == null || atual.anterior == null) return;
 
